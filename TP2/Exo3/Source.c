@@ -11,13 +11,28 @@ int main() {
 		scanf_s("%d", &n);
 	}
 
-	if (n % 4 == 0) {
-		printf("\n%d est une annee bisextile", n);
-	}
-	else {
-		printf("\n%d n'est pas une annee bisextile", n);
-	}
+	//if (n % 4 == 0) {										////Première manière
+	//	printf("\n%d est une annee bissextile", n);
+	//}
+	//else {
+	//	printf("\n%d n'est pas une annee bissextile", n);
+	//}
 
+	if (n % 100 == 0) {										//deuxième manière
+		if (n % 400 == 0) {
+			printf("\n%d est une annee bissextile", n);
+
+		}
+		if (n % 4 == 0) {
+			printf("\n%d est une annee bissextile", n);
+		}
+		else {
+			printf("\n%d n'est pas une annee bissextile", n);
+		}
+	}
+	else{ 
+		printf("\n%d n'est pas une annee bissextile", n); 
+	}
 
 
 }
