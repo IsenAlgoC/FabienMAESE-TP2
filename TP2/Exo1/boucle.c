@@ -32,12 +32,12 @@ int main() {
 		
 	printf("entrez un entier: ");
 	scanf_s("%hu", &n);
-	while (n > 361) {											// recommencer la saisie tant que n est trop grand 
+	while (n > 365) {											// recommencer la saisie tant que n est trop grand 
 		printf("entrez un autre entier plus petit: ");
 		scanf_s("%hu", &n);
 	}
 
-	for (k; k <= n; ++k) {						// Au-delà des valeurs n permises, la somme est négative
+	for (k; k <= n; ++k) {						// Au-delà des valeurs n permises, la somme est absurde (négative ou trop petite)
 		sum += k;
 	}
 	printf("\nLa somme des %d premiers entiers est %d\n", n, sum);
